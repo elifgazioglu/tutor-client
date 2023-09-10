@@ -1,0 +1,65 @@
+/* tutorProfile.scss */
+
+.tutor-profile {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+    }
+  
+    div {
+      margin-bottom: 20px;
+  
+      label {
+        display: block;
+        font-weight: bold;
+        color: #555;
+      }
+  
+      input[type="text"],
+      input[type="date"],
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 18px;
+        background-color: #fff;
+        transition: border-color 0.2s;
+  
+        &:focus {
+          border-color: #007bff;
+          outline: none;
+        }
+      }
+  
+      textarea {
+        height: 120px;
+      }
+  
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 12px 24px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: background-color 0.2s;
+  
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,36 @@
+*{
+  .link{
+      text-decoration: none;
+      color: inherit;
+  }
+}
+
+@mixin custom-media($min-width, $max-width) {
+  @media (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width:1400px){
+    @content;
+  }
+}
+
+@mixin largeDesktop {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width:480px){
+    @content;
+  }
+}

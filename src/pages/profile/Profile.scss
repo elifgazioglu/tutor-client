@@ -1,0 +1,123 @@
+@import "../../App.scss";
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .camera-icon {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 60%;
+
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     bottom: -5px;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 1px;
+        //     background-color: #ccc;
+        // }
+
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+    }
+
+    
+    .input-security {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10px;
+        width: 60%;
+
+        .change-email,
+        .change-password {
+            background-color: white;
+            margin: 0;
+            margin-right: 40px;
+            margin-left: 50px;
+            color: red;
+            border: solid 2px red;
+            border-radius: 4px;
+            width: 300px;
+            height: 40px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(254, 220, 220);
+            }
+
+            @include mobile {
+                width: 120px;
+                margin: 0;
+                margin-left: 10px;
+            }
+
+        }
+
+        .change-email {
+            border: solid 2px black;
+            color: black;
+
+            &:hover {
+                background-color: rgb(202, 201, 201);
+            }
+        }
+    }
+
+    input[type="file"] {
+        margin-top: 10px;
+    }
+
+    .update-button {
+        width: 200px;
+        height: 40px;
+        margin-top: 20px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        
+
+        &:hover {
+            background-color: rgb(0, 73, 0);
+        }
+    }
+}

@@ -1,0 +1,89 @@
+@import "../../App.scss";
+
+.tutors-container {
+    text-align: center;
+
+    .tutors-header-div {
+        position:static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        height: 200px;
+        color: white;
+
+
+        .x {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            background-size:cover;
+
+            @include custom-media(1001px, 1920px) {
+                background-image: url("/b2.png");
+            }
+    
+            @include custom-media(1px, 1000px) {
+                background-image: url("/b1.png");
+            }
+        }
+
+
+
+        .tutors-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            font-family: "Ivar Text", sans-serif;
+            font-weight: 700;
+            color: white;
+            padding: 10px 20px;
+
+            @include mobile {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .tutors-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .tutor-item {
+            width: 60%;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+
+            .tutor-link {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                text-decoration: none;
+
+                .tutors-img {
+                    width: 150px;
+                    height: 150px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    margin-bottom: 10px;
+                }
+
+                .tutor-information {
+
+                    .tutor-name,
+                    .tutor-lastname,
+                    .tutor-education {
+                        font-size: 16px;
+                        color: #333;
+                    }
+                }
+            }
+        }
+    }
+}

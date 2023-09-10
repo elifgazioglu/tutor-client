@@ -1,0 +1,86 @@
+@import "../../App.scss";
+
+.tutor-apply-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 50%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    @include custom-media(1px, 736px) {
+      width: 80%;
+    }
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  .cv-upload-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    background-color: #3498db;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #2980b9;
+    }
+  }
+
+  .cv-icon {
+    margin-right: 5px;
+  }
+
+  .react-select {
+    width: 30%;
+
+    @include custom-media(1px, 736px) {
+      width: 85%;
+    }
+  }
+
+  button[type="submit"] {
+    background-color: #44a96b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #18924d;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    text-align: center;
+
+    &.success-message {
+      color: green; // Yeşil renk başarı durumu için
+    }
+
+    &.error-message {
+      color: #ff0000; // Kırmızı renk başarısız durumu için
+    }
+  }
+
+}

@@ -1,0 +1,69 @@
+@import "../../App.scss";
+
+.register {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+    height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.5)),
+        url("https://img.freepik.com/free-photo/book-with-green-board-background_1150-3837.jpg?w=996&t=st=1694107931~exp=1694108531~hmac=fc48930647cda9daf56c8111bf44ba34f811e2804ab9f4a1b2914432da47e861");
+    background-size: cover;
+
+    h1 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 10px;
+        font-size: 2rem;
+        color: white;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        background-color: white;
+        width: 250px;
+        gap: 15px; //inputlarin arasindaki bosluk
+
+        @include custom-media(1px, 320px) {
+            width: 200px;
+        }
+
+        @include custom-media(1365px, 1920px) {
+            width: 300px;
+        }
+
+        input {
+            padding: 5px;
+            border: none;
+            border-bottom: 1px solid rgb(185, 184, 184);
+
+        }
+
+        button {
+            background-color: pink;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        span {
+            font-size: 13px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 15px;
+            text-align: center;
+            color: #ff0000;
+        }
+    }
+}

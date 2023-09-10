@@ -1,0 +1,112 @@
+@import "../../../App.scss";
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    position: sticky;
+    top: 0px;
+    transition: 0.5s all ease;
+  
+  
+    &.active {
+      background-color: white;
+      color: black;
+    }
+  
+    .container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0px;
+  
+      .logo {
+        font-size: 34px;
+        font-weight: bold;
+        margin-left: 20px;
+  
+        .text {
+          color: black;
+        }
+      }
+  
+      .links {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+  
+        span {
+          white-space: nowrap;
+          color: black;
+          cursor: pointer;
+        }
+  
+        span::after {
+          content: "";
+          position: absolute;
+          bottom: -8px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: rgb(164, 179, 241);
+          transform: scaleX(0);
+          transition: transform 0.3s ease-in-out;
+        }
+  
+        span:hover::after {
+          transform: scaleX(1);
+        }
+  
+        .user {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
+          position: relative;
+  
+          img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+  
+          .options {
+            position: absolute;
+            z-index: 10;
+            top: 50px;
+            right: 0;
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            border: 1px solid lightgrey;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 200px;
+            font-weight: 300;
+            color: gray;
+  
+            .link {
+              color: gray;
+            }
+          }
+        }
+  
+        button {
+          background-color: rgb(44,75,255);
+          font-size: 15px;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 5px;
+          border: 1px solid white;
+          cursor: pointer;
+
+        }
+      }
+    }
+  }

@@ -1,0 +1,177 @@
+@import "../../App.scss";
+
+.home {
+    .container-home-part-one {
+        background-color: rgb(252, 212, 219);
+
+        display: flex;
+        justify-content: space-between;
+
+        @include custom-media(1px, 700px) {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+
+        .part-one-left-side {
+            width: 60%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+            @include custom-media(1px, 700px) {
+                margin-bottom: 0px;
+                margin-top: 20px;
+                width: 70%;
+            }
+
+            .part-one-first {
+                font-size: 80px;
+                color: rgb(251, 83, 83);
+                margin-left: 50px;
+
+                @include custom-media(1px, 700px) {
+                    font-size: 50px;
+                }
+
+                @include custom-media(701px, 800px) {
+                    font-size: 60px;
+                }
+
+                span {
+                    color: red;
+                }
+            }
+
+            .part-one-second {
+                font-size: 50px;
+                color: rgb(251, 83, 83);
+                margin-left: 50px;
+
+                @include custom-media(1px, 700px) {
+                    font-size: 30px;
+                }
+
+                @include custom-media(701px, 800px) {
+                    font-size: 40px;
+                }
+
+                span {
+                    color: red;
+                }
+            }
+        }
+
+        .part-one-right-side {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            margin: 3%;
+
+            @include custom-media(1px, 700px) {
+                justify-content: center;
+            }
+
+            img {
+                width: 70%;
+                height: 70%;
+                object-fit: cover;
+                border-radius: 0 0 0 50%;
+
+                @include custom-media(1px, 700px) {
+                    width: 80%;
+                    height: 80%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .container-home-part-two {
+        height: 1000px;
+        width: 100%;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("/b3.png");
+        display: flex;
+        align-items: center;
+        justify-content: baseline;
+
+        @include custom-media(1px, 799px) {
+            height: 700px;
+        }
+
+        @include custom-media(800px, 900px) {
+            height: 450px;
+        }
+
+        @include custom-media(901px, 1030px) {
+            height: 550px;
+        }
+
+        @include custom-media(1031px, 1113px) {
+            height: 600px;
+        }
+
+        @include custom-media(1113px, 1918px) {
+            height: 750px;
+        }
+
+
+        .part-two-text {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            font-family: monospace;
+            margin-left: 10%;
+
+            p {
+                font-size: 50px;
+                font-family:Georgia, 'Times New Roman', Times, serif;
+
+                @include custom-media(1px, 320px) {
+                    font-size: 25px;
+                }
+
+                @include custom-media(321px, 799px) {
+                    font-size: 30px;
+                }
+
+                @include custom-media(800px, 900px) {
+                    font-size: 20px;
+                }
+
+                @include custom-media(901px, 1030px) {
+                    font-size: 22px;
+                }
+
+                @include custom-media(1031px, 1113px) {
+                    font-size: 25px;
+                }
+
+                @include custom-media(1113px, 1919px) {
+                    font-size: 30px;
+                }
+            }
+
+            button {
+                font-size: 20px;
+                font-family: 'Courier New', Courier, monospace;
+                margin-top: 30px;
+                width: 150px;
+                height: 80px;
+                border-radius: 50px;
+                border: none;
+                background-color: rgb(46, 46, 251);
+                color: white;
+                cursor: pointer;
+
+                @include custom-media(1px, 800px) {
+                    width: 150px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+}

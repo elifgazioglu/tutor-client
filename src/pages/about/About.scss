@@ -1,0 +1,264 @@
+@import "../../App.scss";
+
+.about {
+
+    .about-container {
+
+        .first-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            margin-bottom: 70px;
+
+            @include custom-media(1px, 800px) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                margin-top: 110px;
+                margin-bottom: 20px;
+            }
+
+            .img-side {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+                height: 50%;
+
+                img {
+                    width: 600px;
+                    height: 400px;
+                    object-fit: cover;
+
+                    @include custom-media(1px, 800px) {
+                        width: 400px;
+                        height: 260px;
+                    }
+                }
+
+                @include custom-media(1px, 800px) {
+                    margin-bottom: 100px;
+                    width: 100%;
+                    height: 100px;
+                    object-fit: cover;
+                }
+            }
+
+            .text-side {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 15px;
+                width: 50%;
+                height: 50%;
+                margin: 20px;
+
+                @include custom-media(1px, 800px) {
+                    width: 80%;
+                    margin-left: 50px;
+                }
+
+                h2,
+                p {
+                    margin-left: 50px;
+
+                    @include custom-media(1px, 800px) {
+                        margin-left: 0px;
+                    }
+                }
+
+                h2 {
+                    margin-bottom: 20px;
+                    font-family: "Lexend Deca", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    font-weight: 600px;
+                    font-size: 35px;
+                    line-height: 20px;
+                    color: #2e475d;
+
+                    @include custom-media(1px, 800px) {
+                        font-size: 25px;
+                    }
+                }
+
+                p {
+                    font-family: "Lexend Deca", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    font-weight: 300px;
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: #2e475d;
+
+                    @include custom-media(1px, 800px) {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+        }
+
+        .second-section {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            flex-direction: column;
+            background-image: url("/b5.png");
+            background-size: 1500px;
+
+            width: 100%;
+            background-repeat: no-repeat;
+
+            @include custom-media(1900px, 2000px) {
+                background-size: 2000px;
+                height: 90vh;
+            }
+
+            @include custom-media(1800px, 1900px) {
+                background-size: 1900px;
+                height: 90vh;
+            }
+
+            @include custom-media(1700px, 1800px) {
+                background-size: 1800px;
+                height: 90vh;
+            }
+
+            @include custom-media(1600px, 1700px) {
+                background-size: 1700px;
+                height: 90vh;
+            }
+
+            @include custom-media(1500px, 1600px) {
+                background-size: 1600px;
+                height: 90vh;
+            }
+
+            @include custom-media(1400px, 1500px) {
+                background-size: 1500px;
+                height: 90vh;
+            }
+
+            @include custom-media(1300px, 1400px) {
+                background-size: 1400px;
+                height: 80vh;
+            }
+
+            @include custom-media(1200px, 1300px) {
+                background-size: 1300px;
+                height: 90vh;
+            }
+
+            @include custom-media(1100px, 1200px) {
+                background-size: 1200px;
+                height: 90vh;
+            }
+
+            @include custom-media(1000px, 1100px) {
+                background-size: 1100px;
+            }
+
+            @include custom-media(900px, 1000px) {
+                background-size: 1000px;
+            }
+
+            @include custom-media(800px, 900px) {
+                background: none;
+            }
+
+            @include custom-media(700px, 800px) {
+                align-items: center;
+            }
+
+            @include custom-media(1px, 900px) {
+                align-items: center;
+                background-image: none;
+                height: auto;
+            }
+
+
+            h1,
+            p {
+                margin-left: 60px;
+                color: #2e475d;
+                font-family: "Lexend Deca", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+                @include custom-media(1px, 800px) {
+                    margin-left: 50px;
+                }
+            }
+
+            h1 {
+                margin-bottom: 40px;
+                font-weight: 600px;
+                font-size: 35px;
+                line-height: 30px;
+
+                @include custom-media(1px, 800px) {
+                    margin-bottom: 20px;
+                    font-size: 25px;
+                }
+
+
+            }
+
+            p {
+                width: 50%;
+                font-weight: 300px;
+                font-size: 18px;
+                line-height: 25px;
+
+                @include custom-media(1px, 800px) {
+                    width: 80%;
+                    font-size: 15px;
+                }
+            }
+
+        }
+
+    }
+
+    .using-page {
+        background-color: rgb(44, 75, 254);
+        height: 300px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        @include custom-media(1px, 800px) {
+            margin-top: 20px;
+        }
+
+
+        h1 {
+            margin-bottom: 40px;
+
+            @include custom-media(1px, 800px) {
+                font-size: 20px;
+            }
+        }
+
+        button {
+            width: 250px;
+            height: 80px;
+            cursor: pointer;
+            background-color: rgb(250, 153, 169);
+            border: none;
+            border-radius: 20px;
+            font-size: 20px;
+            color: white;
+
+            @include custom-media(1px, 800px) {
+                font-size: 17px;
+                width: 200px;
+                height: 60px;
+            }
+        }
+
+        button:hover {
+            background-color: rgb(252, 109, 133);
+        }
+    }
+}
