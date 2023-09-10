@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./featured.scss";
+import "./Featured.scss";
 
 const Featured = () => {
   const [featuredWordIndex, setFeaturedWordIndex] = useState(0);
