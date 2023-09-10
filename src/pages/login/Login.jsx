@@ -27,6 +27,7 @@ const Login = () => {
       );
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
       localStorage.setItem("currentUser", JSON.stringify(res.data));
+      document.cookie = `accessToken=${res.data.token};max-age=604800;`
       navigate("/");
     } catch (err) {
       setErrorMessage("E-posta veya şifre geçersiz...");
