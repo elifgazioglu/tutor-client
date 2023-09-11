@@ -9,9 +9,8 @@ const Footer = () => {
         <div className="pages">
           <div className="learn">
             <h3>DAHA FAZLA BİLGİ EDİNİN</h3>
-            <span>Hakkımızda</span>
-            <span>Neden arpa?</span>
-            <span>İletişim</span>
+            <a href="/about">Hakkımızda</a>
+            <a href="/contact">İletişim</a>
           </div>
           <div className="contact">
             <div className="social">
