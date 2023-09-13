@@ -1,11 +1,18 @@
 import "./Footer.scss";
-import { BiLogoTwitter, BiLogoLinkedin, BiLogoInstagramAlt, BiLogoFacebook} from "react-icons/bi";
+import {
+  BiLogoTwitter,
+  BiLogoLinkedin,
+  BiLogoInstagramAlt,
+  BiLogoFacebook,
+} from "react-icons/bi";
 
 const Footer = () => {
   return (
     <div className="footer">
       <div className="container">
-        <div className="logo">arpa.</div>
+        <div className="logo">
+          <img className="logo-img" src="/logo.png" alt="Logo" />
+        </div>
         <div className="pages">
           <div className="learn">
             <h3>DAHA FAZLA BİLGİ EDİNİN</h3>
@@ -14,7 +21,7 @@ const Footer = () => {
           </div>
           <div className="contact">
             <div className="social">
-              <h3>İLETİŞİM</h3>
+              <h3>SOSYAL MEDYA</h3>
               <div className="icons">
                 <a href="" target="" rel="">
                   <BiLogoTwitter className="socials" />

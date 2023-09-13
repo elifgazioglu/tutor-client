@@ -59,7 +59,7 @@ const Login = () => {
         </button>
         {errorMessage && <p>{errorMessage}</p>}
         <span>
-          Henüz bir hesabınız yok mu? <Link to="/giris-yap">Giriş Yap</Link>
+          Henüz bir hesabınız yok mu? <Link to="/kayit-ol">Kayıt ol</Link>
         </span>
       </form>
     </div>

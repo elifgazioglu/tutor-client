@@ -70,7 +70,9 @@ const Navbar = () => {
       <div className="container">
         <div className="logo">
           <Link className="link" to="/">
-            <span className="text">arpa.</span>
+            <span className="logo-side">
+              <img className="logo-img" src="/logo.png" alt="Logo" />
+            </span>
           </Link>
         </div>
         <div className="links">
