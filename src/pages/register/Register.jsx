@@ -92,7 +92,7 @@ const Register = () => {
           onChange={handleChange}
           placeholder="parola"
         />
-        <button type="submit">Kayit ol</button>
+        <button type="submit">Kayıt ol</button>
         {errorMessage && <p>{errorMessage}</p>}
         <span>
           Bir hesabın var mı? <Link to="/giris-yap">Giriş Yap</Link>

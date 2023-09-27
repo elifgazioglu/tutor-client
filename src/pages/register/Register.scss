@@ -14,7 +14,7 @@
     height: 100vh;
     background: linear-gradient(rgba(255, 255, 255, 0.5),
             rgba(255, 255, 255, 0.5)),
-        url("https://img.freepik.com/free-photo/book-with-green-board-background_1150-3837.jpg?w=996&t=st=1694107931~exp=1694108531~hmac=fc48930647cda9daf56c8111bf44ba34f811e2804ab9f4a1b2914432da47e861");
+        url("/b6.jpg");
     background-size: cover;
 
     h1 {
@@ -52,6 +52,7 @@
             color: white;
             border: none;
             padding: 10px;
+            font-size: 15px;
             cursor: pointer;
         }
 
