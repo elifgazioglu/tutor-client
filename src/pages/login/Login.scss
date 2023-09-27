@@ -13,7 +13,7 @@
     height: 100vh;
     background: linear-gradient(rgba(255, 255, 255, 0.5),
             rgba(255, 255, 255, 0.5)),
-        url("https://img.freepik.com/free-photo/wisdom-expertise-success-abundance-piled-generated-by-ai_188544-20231.jpg?t=st=1694163847~exp=1694167447~hmac=1394b137569b7e465cb9c25ae36372f163464bff4d42072a796cb59bcb1abf5f&w=996");
+        url("/b7.jpg");
     background-size: cover;
 
     h1 {
@@ -29,7 +29,7 @@
         padding: 40px;
         background-color: white;
         width: 250px;
-        gap: 15px; //inputlarin arasindaki bosluk
+        gap: 15px;
 
         @include custom-media(1px, 320px) {
             width: 200px;
@@ -51,6 +51,7 @@
             color: white;
             border: none;
             padding: 10px;
+            font-size: 15px;
             cursor: pointer;
         }
 
