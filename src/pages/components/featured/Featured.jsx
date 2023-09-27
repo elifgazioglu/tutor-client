@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Featured.scss";
 
 const Featured = () => {
   const [featuredWordIndex, setFeaturedWordIndex] = useState(0);
-  const words = ["eğitime", "danışmana", "desteğe", "arkadaşa", "sevgiye"]; 
+  const words = ["eğitime", "danışmana", "desteğe", "arkadaşa", "sevgiye"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,7 +24,9 @@ const Featured = () => {
           <h1 className="word">ihtiyaç duyar.</h1>
         </div>
         <div className="button">
-        <a href="/kayit-ol">Kayıt ol!</a>
+          <Link className="link" to="/kayit-ol">
+            Kayıt ol!
+          </Link>
         </div>
       </div>
     </div>
