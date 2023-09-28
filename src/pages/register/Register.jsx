@@ -41,12 +41,22 @@ const Register = () => {
           `${import.meta.env.VITE_BACKEND_URL}/api/auth/register`,
           formData
         );
-        setFormData({ username: "", email: "", password: "" });
+        setFormData({ name: "", lastName: "", email: "", password: "" });
         console.log(res.data);
         dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
         localStorage.setItem("currentUser", JSON.stringify(res.data));
+        const loginResponse = await axios.post(
+          `${import.meta.env.VITE_BACKEND_URL}/api/auth/login`,
+          {
+            email: formData.email,
+            password: formData.password,
+          },
+          { withCredentials: true }
+        );
+        document.cookie = `accessToken=${loginResponse.data.token};max-age=604800;`
         navigate("/");
       }
+      
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE" });
       console.error(err);
