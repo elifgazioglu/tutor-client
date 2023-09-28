@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./Profile.scss";
 import axios from "axios";
 import { AiOutlineCamera } from "react-icons/ai";
+import { Context } from "../../context/Context";
 
 const Profile = () => {
   const [profileData, setProfileData] = useState({
@@ -13,6 +14,7 @@ const Profile = () => {
   });
 
   const [selectedFile, setSelectedFile] = useState(null);
+  const { user, dispatch } = useContext(Context);
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -35,9 +37,13 @@ const Profile = () => {
         updatedData.profilePic = filename;
 
         try {
-          await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/upload`, formData, {
-            withCredentials: true,
-          });
+          await axios.post(
+            `${import.meta.env.VITE_BACKEND_URL}/api/upload`,
+            formData,
+            {
+              withCredentials: true,
+            }
+          );
         } catch (err) {
           console.log(err);
         }
@@ -59,10 +65,15 @@ const Profile = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/users`, {
-          withCredentials: true,
-        });
-        console.log(res);
+        const res = await axios.get(
+          `${import.meta.env.VITE_BACKEND_URL}/api/users`,
+          {
+            headers: {
+              Authorization: `${user?.token}`,
+            },
+          }
+        );
+        console.log(user.token);
         setProfileData(res.data);
       } catch (err) {
         console.log(err);
@@ -78,7 +89,9 @@ const Profile = () => {
           src={
             selectedFile
               ? URL.createObjectURL(selectedFile)
-              : `${import.meta.env.VITE_BACKEND_URL}/images/${profileData?.profilePic}`
+              : `${import.meta.env.VITE_BACKEND_URL}/images/${
+                  profileData?.profilePic
+                }`
           }
           alt=""
         ></img>
