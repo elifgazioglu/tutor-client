@@ -38,7 +38,6 @@ const Navbar = () => {
         );
         setCurrentUser(res.data);
       } catch (err) {
-        console.log(user.token);
         console.log(err);
       }
     };
