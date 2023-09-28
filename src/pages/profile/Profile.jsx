@@ -55,9 +55,7 @@ const Profile = () => {
         `${import.meta.env.VITE_BACKEND_URL}/api/users`,
         updatedData,
         {
-          headers: {
-            Authorization: `${user?.token}`,
-          },
+          withCredentials: true,
         }
       );
       console.log(res);
