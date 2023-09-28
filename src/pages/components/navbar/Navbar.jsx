@@ -85,13 +85,13 @@ const Navbar = () => {
               <span className="text">İletişim</span>
             </Link>
           </div>
-          {currentUser && (
+          {/* {currentUser && (
             <div className="user">
               <Link className="link" to="/egitmenler">
                 <span className="text">Eğitmenler</span>
               </Link>
             </div>
-          )}
+          )} */}
           {currentUser ? (
             <div className="user" onClick={() => setOpen(!open)}>
               <img

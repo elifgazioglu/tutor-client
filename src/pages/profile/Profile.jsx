@@ -159,10 +159,6 @@ const Profile = () => {
           placeholder="telefon"
         />
       </div>
-      <div className="input-security">
-        <button className="change-password">Şifre Değiştir</button>
-        <button className="change-email">Email Değiştir</button>
-      </div>
       <button className="update-button" onClick={updateUserProfile}>
         Profilimi Güncelle
       </button>
