@@ -31,8 +31,8 @@
         color: black;
 
         .logo-img {
-          width: 160px;
-          height: 50px;
+          width: 180px;
+          height: 40px;
           object-fit: cover;
 
           @include custom-media(1px, 800px) {
