@@ -70,7 +70,7 @@ const Navbar = () => {
         <div className="logo">
           <Link className="link" to="/">
             <span className="logo-side">
-              <img className="logo-img" src="/logo.png" alt="Logo" />
+              <img className="logo-img" src="/logo1.png" alt="Logo" />
             </span>
           </Link>
         </div>
