@@ -1,10 +1,10 @@
-# Pekicocuk.com - Client
+# Pekicocuk.com - Client 👩🏻‍💻
 
 ![pekicocuk.com](https://github.com/elifgazioglu/tutor-client/blob/master/public/logo11.png?raw=true)
 
 [pekicocuk.com](http://pekicocuk.com) is a website that offers educational and entertaining content for children. This repository contains the client-side codebase of the project. The project uses technologies such as React, Axios, Sass, and Vite.
 
-## Technologies Used
+## Technologies Used 
 
 - React: A JavaScript library used for developing the web interface.
 - Axios: An HTTP client used for data exchange.
@@ -44,7 +44,7 @@ To run the project locally, you can follow these steps:
    ```bash
    yarn start
 
-## Ekran Görüntüleri
+## Screenshots📸
 
 ![Uygulama Ekran Görüntüsü](https://github.com/elifgazioglu/tutor-client/blob/master/public/screenshots/Ekran%20Resmi%202023-09-28%2014.26.43.png?raw=true)
 
